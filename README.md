@@ -116,19 +116,22 @@ shows the same snippet and can copy it for you.
 
 ```
 [KEY = telemetrydevice]
-    addr = "127.0.0.1:29373"
+    addr = "127.0.0.1"
     decimation = 1
     enable = true
+    port = 29373
 [END]
 [KEY = motiondevice]
-    addr = "127.0.0.1:29373"
+    addr = "127.0.0.1"
     decimation = 1
     enable = true
+    port = 29373
 [END]
 ```
 
-If another program already receives IL-2 telemetry, keep its `addr` and add ours as
-`addr1 = "127.0.0.1:29373"` in both sections.
+If another program already receives IL-2 telemetry, keep its `addr` and `port` and add ours as
+`addr1 = "127.0.0.1:29373"` in both sections (or `addr2`, ... if that is taken). Unlike the first
+entry, these take the address and port together.
 
 ### War Thunder (Beta)
 
